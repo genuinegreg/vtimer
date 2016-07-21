@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://event.devzone.novialys.com/compteur.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title></title>
+	<style type="text/css">
+		*
+		{
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		#time
+		{
+			font-size: 20vw;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center; /
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="time">10:49:05</div>
+
+<script type="text/javascript">
+	
+	var time = document.getElementById('time');
+
+	var setTime = function()
+	{
+		var d = new Date();
+
+		var h= d.getHours();
+		if (h<10) {h = "0" + h}
+		var m=d.getMinutes();
+		if (m<10) {m = "0" + m}
+		var s=d.getSeconds();
+		if (s<10) {s = "0" + s}
+
+		time.innerHTML = h+':'+m+':'+s;
+	}
+
+	setTime();
+
+	window.setInterval(setTime, 1000)
+	
+
+</script>
+
+
+</body></html>
